@@ -2,6 +2,8 @@
 
 Welcome to the JLC Language School website repository. This project is built using Astro, Tailwind CSS, and TypeScript to create a modern, responsive website for our language school.
 
+🌐 **Live Site:** [https://jens599.github.io/jlc-astro](https://jens599.github.io/jlc-astro)
+
 ## 🚀 Tech Stack
 
 - **[Astro](https://astro.build/)** - Web framework for content-driven websites
