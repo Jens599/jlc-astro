@@ -1,0 +1,42 @@
+---
+import Layout from '../layouts/Layout.astro'
+---
+
+<Layout title="Contact Us | JLC Language School">
+  <main class="container mx-auto px-4">
+    <h1 class="text-3xl font-bold my-8">Contact Us</h1>
+    <section>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div>
+          <h2 class="text-xl font-semibold mb-4">Get in Touch</h2>
+          <!-- Add contact form here -->
+          <form class="space-y-4">
+            <div>
+              <label for="name" class="block mb-1">Name</label>
+              <input type="text" id="name" class="w-full border p-2 rounded" />
+            </div>
+            <div>
+              <label for="email" class="block mb-1">Email</label>
+              <input type="email" id="email" class="w-full border p-2 rounded" />
+            </div>
+            <div>
+              <label for="message" class="block mb-1">Message</label>
+              <textarea id="message" rows="4" class="w-full border p-2 rounded"></textarea>
+            </div>
+            <button type="submit" class="bg-brand-red text-white px-4 py-2 rounded">
+              Send Message
+            </button>
+          </form>
+        </div>
+        <div>
+          <h2 class="text-xl font-semibold mb-4">Contact Information</h2>
+          <p>Suwarna Marg, Kathmandu</p>
+          <p>Next to Shanker Dev Campus</p>
+          <p>Email: jlcgakkou@gmail.com</p>
+          <p>Hours: Sun - Fri: 8:30 am - 06.00pm</p>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>
+

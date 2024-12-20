@@ -1,0 +1,53 @@
+---
+import { Icon } from 'astro-icon/components'
+import { Image } from 'astro:assets'
+import logo from '../assets/logo.svg'
+import SocialLinks from './SocialLinks.astro'
+import MainNavLinks from './MainNavLinks.astro'
+---
+
+<!-- Top Banner -->
+<div
+  class="w-full h-16 bg-brand-green flex justify-around items-center text-white px-1 shadow-none transition-shadow6"
+>
+  <div class="flex gap-2">
+    <Icon name="mail-icon" class="size-6" />
+    jlcgakkou@gmail.com
+  </div>
+  <div class="flex gap-2">
+    <Icon name="clock-icon" class="size-6" />
+    Sun - Fri: 8:30 am - 06.00pm
+  </div>
+  <a href="">
+    <div class="flex gap-2">
+      <Icon name="location-icon" class="size-6" />
+      Suwarna Marg, Kathmandu Next to Shanker Dev Campus
+    </div>
+  </a>
+  <a href="/studyInJapan" class="bg-brand-red h-full items-center flex">
+    <div class="flex gap-2 items-center px-8 uppercase">
+      Appointment
+      <Icon name="arrow-right-icon" class="size-6" />
+    </div>
+  </a>
+</div>
+
+<!-- Main Navigation -->
+<div
+  class="w-full bg-white flex justify-around p-4 items-center shadow-sm font-medium"
+>
+  <!-- Logo -->
+  <div class="w-28">
+    <Image src={logo} alt="JLC logo" class="w-full" />
+  </div>
+
+  <!-- Navigation Links -->
+  <nav>
+    <MainNavLinks />
+  </nav>
+
+  <!-- Social Links -->
+  <div class="">
+    <SocialLinks />
+  </div>
+</div>

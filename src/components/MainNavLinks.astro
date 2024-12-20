@@ -1,0 +1,30 @@
+---
+import { twMerge } from 'tailwind-merge'
+const isActive = (path: string, currentPath: string) =>
+  currentPath === path && 'shadow-highlight' 
+---
+
+<nav>
+  <ul class="flex gap-4 text-center">
+    {
+      [
+        { href: '/', label: 'Home' },
+        { href: '/aboutUs', label: 'About us' },
+        { href: '/studyInJapan', label: 'Study in Japan' },
+        { href: '/ourTeam', label: 'Our Team' },
+        { href: '/faq', label: 'FAQ' },
+        { href: '/contactUs', label: 'Contact Us' },
+      ].map(({ href, label }) => (
+        <li>
+          <a
+            class={twMerge('px-1', isActive(href, Astro.url.pathname))}
+            href={href}
+            aria-current={Astro.url.pathname === href ? 'page' : undefined}
+          >
+            {label}
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</nav>
