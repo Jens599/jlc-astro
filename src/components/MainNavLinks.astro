@@ -1,19 +1,21 @@
 ---
 import { twMerge } from 'tailwind-merge'
 const isActive = (path: string, currentPath: string) =>
-  currentPath === path && 'shadow-highlight' 
+  currentPath === path && 'shadow-highlight'
+
+const basePath = import.meta.env.BASE_PATH || ''
 ---
 
 <nav>
   <ul class="flex gap-4 text-center">
     {
       [
-        { href: '/', label: 'Home' },
-        { href: '/aboutUs', label: 'About us' },
-        { href: '/studyInJapan', label: 'Study in Japan' },
-        { href: '/ourTeam', label: 'Our Team' },
-        { href: '/faq', label: 'FAQ' },
-        { href: '/contactUs', label: 'Contact Us' },
+        { href: `${basePath}/`, label: 'Home' },
+        { href: `${basePath}/aboutUs`, label: 'About us' },
+        { href: `${basePath}/studyInJapan`, label: 'Study in Japan' },
+        { href: `${basePath}/ourTeam`, label: 'Our Team' },
+        { href: `${basePath}/faq`, label: 'FAQ' },
+        { href: `${basePath}/contactUs`, label: 'Contact Us' },
       ].map(({ href, label }) => (
         <li>
           <a
