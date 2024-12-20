@@ -7,7 +7,7 @@ import icon from 'astro-icon'
 // https://astro.build/config
 export default defineConfig({
   site: 'https://jens599.github.io',
-  // base: 'jlc-astro',
+  base: 'jlc-astro',
   integrations: [tailwind(), icon()],
   devToolbar: {
     enabled: true,
