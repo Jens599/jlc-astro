@@ -1,0 +1,23 @@
+---
+const {
+	title = 'Service Title',
+	description = 'Brief description of the service goes here. This helps explain what value this service provides.',
+	icon = 'clock-icon'
+} = Astro.props
+
+import { Icon } from 'astro-icon/components'
+---
+
+<div
+	class="group/icon shaadow grid cursor-pointer grid-cols-3 grid-rows-2 place-items-center rounded-lg bg-brand-blue/70 px-10 py-6 text-white"
+>
+	<div class="relative col-span-1 row-span-2 aspect-square rounded-full bg-white p-6">
+		<div
+			class="absolute top-0 h-0 w-2 origin-top -translate-x-12 rounded-b-full bg-green-500 transition-all duration-300 group-hover/icon:h-full"
+		>
+		</div>
+		<Icon name={icon} class="size-16 text-brand-red transition group-hover/icon:text-green-500" />
+	</div>
+	<span class="col-span-2 text-2xl font-bold">{title}</span>
+	<span class="col-span-2 text-lg">{description}</span>
+</div>

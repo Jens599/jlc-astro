@@ -1,21 +1,25 @@
 ---
+import Footer from '@/components/Footer.astro'
 import Navigation from '../components/Navigation.astro'
 import '../Styles/globle.css'
 ---
 
 <!doctype html>
 <html lang="en" class="h-full">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="generator" content={Astro.generator} />
-    <title>{Astro.props.title}</title>
-  </head>
-  <body class="m-0 w-full h-full bg-white flex flex-col">
-    <Navigation />
-    <div class="flex-1 container mx-auto px-4">
-      <slot />
-    </div>
-  </body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{Astro.props.title}</title>
+	</head>
+	<body
+		class="bg-gradient-lines bg-pattern-size bg-pattern-position m-0 flex h-48 w-full flex-col bg-slate-100 from-brand-blue/5 "
+	>
+		<Navigation />
+		<main class="container mx-auto px-4">
+			<slot />
+		</main>
+		<Footer />
+	</body>
 </html>

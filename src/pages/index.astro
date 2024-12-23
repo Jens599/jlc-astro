@@ -3,34 +3,124 @@ import Layout from '../layouts/Layout.astro'
 import HeroCard from '../components/HeroCard.astro'
 import { homeCards } from '../data/home'
 import { Icon } from 'astro-icon/components'
-import hero from '../assets/Hero.jpg'
+F
+import ServiceCard from '../components/ServiceCard.astro'
+import Card from '@/assets/japan-banner1.jpg.png'
+import ServiceBG from '@/assets/TechBg.svg'
 import { Image } from 'astro:assets'
 ---
 
 <Layout title="Home | JLC Language School">
-  <div class="grid h-3/4 grid-cols-2 w-full relative overflow-hidden">
-    <Image
-      src={hero}
-      alt="Chureito Pagoda with Mount Fuji in the background, an iconic Japanese landmark"
-      class="col-span-full place-self-center object-cover absolute -z-1 w-full"
-    />
-    <div
-      class="flex relative flex-col items-end justify-center w-full text-white uppercase h-150"
-    >
-      <div class="flex flex-col items-end gap-4 font-bold">
-        <span class="text-8xl text-shadow pointer-events-none">Study In</span>
-        <span class="text-8xl text-shadow pointer-events-none">Japan</span>
-        <a href="/studyInJapan">
-          <div
-            class="flex items-center gap-6 py-2 pr-2 pl-4 rounded-full bg-brand-red text-shadow shadow hover:bg-brand-green transition"
-          >
-            View Details
-            <div class="p-2 text-2xl bg-white rounded-full aspect-square">
-              <Icon name="arrow-right-icon" class="text-brand-green" />
-            </div>
-          </div>
-        </a>
-      </div>
-    </div>
-  </div>
+	<div class="relative grid h-[36rem] w-full grid-cols-2 overflow-hidden">
+		<Image
+			src={hero}
+			alt="Chureito Pagoda with Mount Fuji in the background, an iconic Japanese landmark"
+			class="-z-1 absolute col-span-full w-full place-self-center object-cover"
+		/>
+		<div class="h-150 relative flex w-full flex-col items-end justify-center uppercase text-white">
+			<div class="flex flex-col items-end gap-4 font-bold">
+				<span class="text-shadow pointer-events-none text-8xl">Study In</span>
+				<span class="text-shadow pointer-events-none text-8xl">Japan</span>
+				<a href="/studyInJapan">
+					<div
+						class="text-shadow flex items-center gap-6 rounded-full bg-brand-red py-2 pl-4 pr-2 shadow transition hover:bg-brand-green"
+					>
+						View Details
+						<div class="aspect-square rounded-full bg-white p-2 text-2xl">
+							<Icon name="arrow-right-icon" class="text-brand-green" />
+						</div>
+					</div>
+				</a>
+			</div>
+		</div>
+	</div>
+	<div
+		class="bg-gradient-lines bg-pattern-size bg-pattern-position relative bg-white from-brand-red/5"
+	>
+		<div class="flex w-full flex-col items-center justify-center md:flex-row lg:-translate-y-32">
+			{
+				homeCards.map((card) => (
+					<HeroCard icon={card.icon} alt={card.alt} title={card.title} statement={card.statement} />
+				))
+			}
+		</div>
+
+		<div class="grid w-full grid-cols-2 gap-4 px-4 pb-16">
+			<div class="relative">
+				<Image
+					src={Card}
+					alt="Instagram advertisement promoting Japanese language classes"
+					class="h-full w-3/4 rounded-xl object-cover shadow ring-1 ring-gray-200"
+				/>
+				<div
+					class="absolute right-16 top-20 flex items-center justify-around gap-8 rounded-xl bg-white px-8 py-4 ring-4 ring-gray-200"
+				>
+					<div class="aspect-square rounded-full bg-brand-green p-4">
+						<Icon name="People" class="size-10 text-white" />
+					</div>
+					<div class="flex flex-col">
+						<span class="text-4xl font-black text-brand-blue">1+</span>
+						<span class="text-2xl text-brand-blue">Satisfied Clients</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="flex flex-col justify-center gap-16 text-xl">
+				<div class="flex flex-col gap-4">
+					<div class="flex gap-8">
+						<span class="text-2xl font-bold text-brand-green">We are Japanese Language School</span>
+						<div class="flex flex-col items-start justify-center gap-2">
+							<div class="h-1 w-16 rounded-full bg-brand-green"></div>
+							<div class="h-1 w-8 rounded-full bg-brand-green"></div>
+						</div>
+					</div>
+					<span class="text-5xl font-black text-brand-blue">JLC"Your future door to Japan"</span>
+					<span class="w-[47ch] text-pretty text-3xl"
+						>Welcome to JLC School of Japanese Language "Your future door to Japan" Come and study
+						japanese language to make your dreams true.</span
+					>
+				</div>
+				<div class="flex flex-col gap-2">
+					<span
+						class="flex items-center gap-4 before:size-4 before:rounded-full before:border-2 before:border-brand-green before:content-['']"
+						><span class="font-bold text-brand-blue">Save money —</span>we help protect you from
+						non-compliance issues.</span
+					>
+					<span
+						class="flex items-center gap-4 before:size-4 before:rounded-full before:border-2 before:border-brand-green before:content-['']"
+						><span class="font-bold text-brand-blue">Grow —</span> you keep your focus on JAPANESE LANGUAGE.</span
+					>
+				</div>
+			</div>
+		</div>
+
+		<div class="absolute bottom-0 left-0 flex items-end gap-4">
+			<div class="relative">
+				<div
+					class="relative size-20 border-[50px] border-brand-green border-r-transparent border-t-transparent"
+				>
+				</div>
+				<span class="absolute bottom-4 left-4 text-2xl font-bold text-white">20</span>
+			</div>
+			<span class="pb-6 text-2xl font-bold text-brand-blue">Golden years we’ve passed!</span>
+		</div>
+	</div>
+
+	<div class="relative overflow-">
+		<Image
+			src={ServiceBG}
+			alt="Instagram advertisement promoting Japanese language classes"
+			class="absolute z-10 w-full"
+		/>
+		<div class="absolute -z-10 size-full bg-black/50"></div>
+		<div class="flex justify-center py-4 text-green-500">
+			<span class="-white text-4xl font-bold">Services</span>
+		</div>
+		<div class="grid grid-cols-2 place-items-center gap-4 px-8 pb-60 pt-4">
+			<ServiceCard />
+			<ServiceCard />
+			<ServiceCard />
+			<ServiceCard />
+		</div>
+	</div>
 </Layout>

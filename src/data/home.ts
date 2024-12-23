@@ -1,27 +1,27 @@
-import chat from "../assets/Icons/chat.png";
-import translate from "../assets/Icons/translate.png";
-import plane from "../assets/Icons/plane.png";
+const chat = '/src/assets/chat.png'
+const translate = '/src/assets/translate.png'
+const plane = '/src/assets/plane.png'
 
 export const homeCards = [
   {
     icon: chat,
-    alt: "chat icon",
-    title: "Free Consultation",
+    alt: 'chat icon',
+    title: 'Free Consultation',
     statement:
-      "JLC always provide absolutely transparency and fair Information with Best Guidance for Career.",
+      'JLC always provide absolutely transparency and fair Information with Best Guidance for Career.',
   },
   {
     icon: translate,
-    alt: "translate icon",
-    title: "Language Classes",
+    alt: 'translate icon',
+    title: 'Language Classes',
     statement:
-      "We provide Japanese language Classes to communicate, educate and transform japanese culture.",
+      'We provide Japanese language Classes to communicate, educate and transform japanese culture.',
   },
   {
     icon: plane,
-    alt: "plane icon",
-    title: "Visa And Documentation",
+    alt: 'plane icon',
+    title: 'Visa And Documentation',
     statement:
-      "We provide easiest documentation support to study,travel at Japan in any purpose, as a Student Visa, Dependent Visa and Visit Visa.",
+      'We provide easiest documentation support to study,travel at Japan in any purpose, as a Student Visa, Dependent Visa and Visit Visa.',
   },
-];
+]

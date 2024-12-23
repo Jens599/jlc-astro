@@ -5,34 +5,30 @@ const { icon, alt, title, statement } = Astro.props
 ---
 
 <div
-  class="flex flex-col gap-4 items-center m-6 bg-white shadow-2xl w-96 py-12.5 px-2 -translate-y-30"
+	class="-translate-y-30 m-6 flex w-96 flex-col items-center gap-4 bg-white px-2 py-12 shadow-2xl"
 >
-  <div
-    class="flex items-center justify-center w-1/3 bg-brand-green rounded-full aspect-square"
-  >
-    <img src={icon} alt={alt} />
-  </div>
-  <div class="text-2xl font-bold text-center text-brand-blue">
-    {title}
-  </div>
-  <div
-    class="text-gray-700 min-h-20 flex items-center justify-center text-center font-medium"
-  >
-    {statement}
-  </div>
-  <a
-    href="/studyInJapan"
-    class="font-bold border-2 border-gray-300 py-2 px-4 h-12 rounded-full origin-right transition relative outline group/cta overflow-hidden"
-  >
-    <div class="flex items-center gap-4 relative">
-      <span class="group-hover/cta:text-white delay-300"> Get Started </span>
-      <div class="p-2 text-white bg-brand-green rounded-full aspect-square">
-        <Icon name="arrow-right-icon" />
-      </div>
-    </div>
-    <div
-      class="absolute w-16 aspect-square bg-brand-green rounded-full -top-6 -translate-y-6 -right-3 group-hover/cta:scale-500 scale-1 transition-transform duration-1000 -z-1 ease-in-out"
-    >
-    </div>
-  </a>
+	<div class="flex aspect-square w-1/3 items-center justify-center rounded-full bg-brand-green">
+		<img src={icon} alt={alt} />
+	</div>
+	<div class="text-center text-2xl font-bold text-brand-blue">
+		{title}
+	</div>
+	<div class="flex min-h-20 items-center justify-center text-center font-medium text-gray-700">
+		{statement}
+	</div>
+	<a
+		href="/studyInJapan"
+		class="group/cta relative h-12 origin-right overflow-hidden rounded-full border-2 border-gray-300 px-4 py-2 font-bold outline transition"
+	>
+		<div class="relative z-10 flex items-center gap-4">
+			<span class="delay-300 ease-in-out group-hover/cta:text-white"> Get Started </span>
+			<div class="aspect-square rounded-full bg-brand-green p-2 text-white">
+				<Icon name="arrow-right-icon" />
+			</div>
+		</div>
+		<div
+			class="absolute -right-3 -top-6 aspect-square w-16 -translate-y-6 scale-0 rounded-full bg-brand-green transition-transform duration-500 ease-in-out group-hover/cta:scale-[500%]"
+		>
+		</div>
+	</a>
 </div>

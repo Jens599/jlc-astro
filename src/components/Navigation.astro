@@ -8,46 +8,44 @@ import MainNavLinks from './MainNavLinks.astro'
 
 <!-- Top Banner -->
 <div
-  class="w-full h-16 bg-brand-green flex justify-around items-center text-white px-1 shadow-none transition-shadow6"
+	class="transition-shadow6 flex h-16 w-full items-center justify-around bg-brand-green px-1 text-white shadow-none"
 >
-  <div class="flex gap-2">
-    <Icon name="mail-icon" class="size-6" />
-    jlcgakkou@gmail.com
-  </div>
-  <div class="flex gap-2">
-    <Icon name="clock-icon" class="size-6" />
-    Sun - Fri: 8:30 am - 06.00pm
-  </div>
-  <a href="">
-    <div class="flex gap-2">
-      <Icon name="location-icon" class="size-6" />
-      Suwarna Marg, Kathmandu Next to Shanker Dev Campus
-    </div>
-  </a>
-  <a href="/studyInJapan" class="bg-brand-red h-full items-center flex">
-    <div class="flex gap-2 items-center px-8 uppercase">
-      Appointment
-      <Icon name="arrow-right-icon" class="size-6" />
-    </div>
-  </a>
+	<div class="flex gap-2">
+		<Icon name="mail-icon" class="size-6" />
+		jlcgakkou@gmail.com
+	</div>
+	<div class="flex gap-2">
+		<Icon name="clock-icon" class="size-6" />
+		Sun - Fri: 8:30 am - 06.00pm
+	</div>
+	<a href="">
+		<div class="flex gap-2">
+			<Icon name="location-icon" class="size-6" />
+			Suwarna Marg, Kathmandu Next to Shanker Dev Campus
+		</div>
+	</a>
+	<a href="/studyInJapan" class="flex h-full items-center bg-brand-red">
+		<div class="flex items-center gap-2 px-8 uppercase">
+			Appointment
+			<Icon name="arrow-right-icon" class="size-6" />
+		</div>
+	</a>
 </div>
 
 <!-- Main Navigation -->
-<div
-  class="w-full bg-white flex justify-around p-4 items-center shadow-sm font-medium"
->
-  <!-- Logo -->
-  <div class="w-28">
-    <Image src={logo} alt="JLC logo" class="w-full" />
-  </div>
+<div class="flex w-full items-center justify-around bg-white p-4 font-medium shadow-sm">
+	<!-- Logo -->
+	<div class="w-28">
+		<Image src={logo} alt="JLC logo" class="w-full" loading="eager" />
+	</div>
 
-  <!-- Navigation Links -->
-  <nav>
-    <MainNavLinks />
-  </nav>
+	<!-- Navigation Links -->
+	<nav>
+		<MainNavLinks />
+	</nav>
 
-  <!-- Social Links -->
-  <div class="">
-    <SocialLinks />
-  </div>
+	<!-- Social Links -->
+	<div class="">
+		<SocialLinks />
+	</div>
 </div>

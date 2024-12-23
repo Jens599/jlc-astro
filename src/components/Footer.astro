@@ -1,0 +1,62 @@
+---
+import { Icon } from 'astro-icon/components'
+import SocialLinks from './SocialLinks.astro'
+---
+
+<div class="flex h-96 w-full items-center py-16 bg-brand-blue px-32 text-lg text-white">
+	<div class="flex w-full items-start justify-around gap-8">
+		<div class="">
+			<div class="flex flex-col gap-4">
+				<span class="font-black">We are JLC!</span>
+				<span class="w-[40ch]">
+					“Your future door to Japan” Come and study japanese language to make your dreams true.
+				</span>
+			</div>
+
+			<div class="flex flex-col gap-4 pt-4">
+				<span class="font-black">Open Hours:</span>
+				<div class="flex flex-col gap-2">
+					<span>Sunday - Friday: 8:30 am - 6 pm,</span>
+					<span>Saturday: CLOSED</span>
+				</div>
+			</div>
+		</div>
+
+		<div class="flex flex-col gap-4">
+			<span class="font-black">Follow Us</span>
+
+			<span class="w-[40ch]">
+				Follow us on social media to get regular updates about our activities.
+			</span>
+
+			<SocialLinks />
+		</div>
+
+		<div class="flex flex-col gap-4">
+			<span class="font-black">Official info:</span>
+
+			<div class="flex gap-4">
+				<Icon name="location-pin" class="size-6" />
+				<span class="w-[40ch]">
+					1st Floor Samar Group Building (Opposite to Shankerdev Campus,) Putalisadak
+				</span>
+			</div>
+
+			<div class="flex gap-4">
+				<Icon name="phone-android" class="size-6" />
+				<span class="">01-4168047, 9860235991</span>
+			</div>
+			<div class="flex gap-4">
+				<Icon name="mail" class="size-6" />
+				<div class="flex flex-col">
+					<span>jlcgakkou@gmail.com</span>
+					<span>ppuri7226@yahoo.com</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="w-full bg-brand-green py-2 text-center text-white">
+	<span>© 2024 Japanese Language Consultancy. All Rights Reserved.</span>
+</div>
