@@ -6,15 +6,20 @@ import icon from 'astro-icon'
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://jens599.github.io',
-  base: 'jlc-astro',
-  integrations: [tailwind(), icon()],
-  vite: {
-    define: {
-      'import.meta.env.BASE_PATH': JSON.stringify('/jlc-astro'),
-    },
-  },
-  // devToolbar: {
-  //   enabled: true,
-  // },
+	site: 'https://jens599.github.io',
+	base: 'jlc-astro',
+	integrations: [tailwind(), icon()],
+	vite: {
+		define: {
+			'import.meta.env.BASE_PATH': JSON.stringify('/jlc-astro')
+		},
+		resolve: {
+			alias: {
+				'@': '/src'
+			}
+		}
+	}
+	// devToolbar: {
+	//   enabled: true,
+	// },
 })
