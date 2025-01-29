@@ -2,18 +2,19 @@
 import Layout from '../layouts/Layout.astro'
 import HeroCard from '../components/HeroCard.astro'
 import { homeCards } from '../data/home'
+import { services } from '../data/home'
 import { Icon } from 'astro-icon/components'
-F
 import ServiceCard from '../components/ServiceCard.astro'
 import Card from '@/assets/japan-banner1.jpg.png'
 import ServiceBG from '@/assets/TechBg.svg'
 import { Image } from 'astro:assets'
+import Hero from '@/assets/Hero.jpg'
 ---
 
 <Layout title="Home | JLC Language School">
 	<div class="relative grid h-[36rem] w-full grid-cols-2 overflow-hidden">
 		<Image
-			src={hero}
+			src={Hero}
 			alt="Chureito Pagoda with Mount Fuji in the background, an iconic Japanese landmark"
 			class="-z-1 absolute col-span-full w-full place-self-center object-cover"
 		/>
@@ -35,7 +36,7 @@ import { Image } from 'astro:assets'
 		</div>
 	</div>
 	<div
-		class="bg-gradient-lines bg-pattern-size bg-pattern-position relative bg-white from-brand-red/5"
+		class="relative bg-white bg-gradient-lines from-brand-red/5 bg-pattern-size bg-pattern-position"
 	>
 		<div class="flex w-full flex-col items-center justify-center md:flex-row lg:-translate-y-32">
 			{
@@ -106,21 +107,24 @@ import { Image } from 'astro:assets'
 		</div>
 	</div>
 
-	<div class="relative overflow-">
+	<div class="relative my-4 overflow-hidden">
 		<Image
 			src={ServiceBG}
 			alt="Instagram advertisement promoting Japanese language classes"
-			class="absolute z-10 w-full"
+			class="absolute -z-10 w-full"
 		/>
 		<div class="absolute -z-10 size-full bg-black/50"></div>
-		<div class="flex justify-center py-4 text-green-500">
-			<span class="-white text-4xl font-bold">Services</span>
+		<div class="flex justify-center py-4 text-white">
+			<span class="text-4xl font-bold">Services</span>
 		</div>
-		<div class="grid grid-cols-2 place-items-center gap-4 px-8 pb-60 pt-4">
-			<ServiceCard />
-			<ServiceCard />
-			<ServiceCard />
-			<ServiceCard />
+		(
+		<div class="grid grid-cols-2 place-items-center gap-4 px-8 py-4">
+			{
+				services.map((service) => (
+					<ServiceCard title={service.title} description={service.statement} icon={service.icon} />
+				))
+			}
 		</div>
+		) }
 	</div>
 </Layout>
